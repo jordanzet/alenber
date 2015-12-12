@@ -1,0 +1,621 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">  
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>{% block titulo %}{% endblock titulo %} La Noche</title>
+		
+		<!-- Estilos Esenciales -->
+		{% block css %}
+		{% endblock css %}
+		<link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}" type="text/css"/>
+		<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}" type="text/css"/> 
+		<link rel="stylesheet" href="{% static "assets/fancybox/jquery.fancybox.css" %}" media="screen"/>  
+		
+		<!-- Estilosn Globales -->
+		<link type="text/css" href="{% static "css/global-style.css" %}" rel="stylesheet" media="screen"/>
+
+		<!-- Favicon -->
+		<link href="images/favicon.png" rel="icon" type="image/png">
+
+		<link rel="stylesheet" href="{% static "assets/owl-carousel/owl.carousel.css" %}"/>
+		<link rel="stylesheet" href="{% static "assets/owl-carousel/owl.theme.css" %}"/>
+		<link rel="stylesheet" href="{% static "assets/sky-forms/css/sky-forms.css" %}"/>    
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="{% static "assets/sky-forms/css/sky-forms-ie8.css" %}" />
+		<![endif]-->
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/jquery-ui.min.js" %}"></script>
+		<!-- Page scripts -->
+		<link rel="stylesheet" href="{% static "assets/layerslider/css/layerslider.css" %}" type="text/css">
+	</head>
+
+	<body>
+		<section id="navMobile" class="aside-menu left">
+			<form class="form-horizontal form-search">
+				<div class="input-group">
+					<input type="search" class="form-control" placeholder="Search...">
+					<span class="input-group-btn">
+						<button id="btnHideMobileNav" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
+					</span>
+				</div>
+			</form>
+			<div id="dl-menu" class="dl-menuwrapper">
+				<ul class="dl-menu"></ul>
+			</div>
+		</section> 
+
+		<section id="asideMenu" class="aside-menu right">
+			<form class="form-horizontal form-search">
+				<div class="input-group">
+					<input type="search" class="form-control" placeholder="Search..." />
+					<span class="input-group-btn">
+						<button id="btnHideAsideMenu" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
+					</span>
+				</div>
+			</form>
+			
+			<h5 class="side-section-title">Optional sidebar menu</h5>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About us</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">Work</a>
+					</li>
+					<li>
+						<a href="#">Online shop</a>
+					</li>
+				</ul>
+			</div>
+			
+			<h5 class="side-section-title">Social media</h5>
+			<div class="social-media">
+				<a href="#"><i class="fa fa-facebook facebook"></i></a>
+				<a href="#"><i class="fa fa-google-plus google"></i></a>
+				<a href="#"><i class="fa fa-twitter twitter"></i></a>
+			</div>
+			
+			<h5 class="side-section-title">Contact information</h5>
+			<div class="contact-info">
+				<h5>Address</h5>
+				<p>5th Avenue, New York - United States</p>
+				
+				<h5>Email</h5>
+				<p>hello@webpixels.ro</p>
+				
+				<h5>Phone</h5>
+				<p>+10 724 1234 567</p>
+			</div>
+		</section>
+
+		<div class="body-wrap">
+			<div id="divStyleSwitcher" class="style-switcher-slidebar">
+				<a href="#" id="cmdShowStyleSwitcher" class="open-panel hidden-xs"><i class="fa fa-cog"></i></a>
+				<div class="switch-panel">
+					<h3>Nuestras Redes Sensuales :3</h3>
+					<hr> 
+					<div class="panel-section">
+						<h4 class="title text-uppercase font-normal">Siguenos en Facebook</h4> 
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+
+						<div class="fb-page" data-href="https://www.facebook.com/lanochecluboficial" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/lanochecluboficial"><a href="https://www.facebook.com/lanochecluboficial">La Noche Club</a></blockquote></div></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-section">
+						<h4 class="title text-uppercase font-normal">Siguenos en Twitter</h4> 
+						<div class="row">
+							<div class="col-xs-12">
+								<a class="twitter-timeline" href="https://twitter.com/NocheClub" data-widget-id="620010569576353792">Tweets por el @NocheClub.</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							</div>      
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div id="divHeaderWrapper" style="height:125px;">
+				<header class="header-alpha header-cover">
+					<div class="top-header"> 
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-6 hidden-xs">
+									<span class="aux-text hidden-xs">LA NOCHE: hola@lanoche.club ó 980 462 607</span>
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<nav class="top-header-menu">
+										<ul class="top-menu">
+											{% if user.is_authenticated %}
+											<li><a href="#"> Bienvenido - {{user.username}}</a></li>
+											<li><a href="{% url 'userprofile:logout_user' %}">Cerrar Sesion</a></li>
+											{% else %}
+											<li><a href="{% url 'userprofile:login_user' %}">Iniciar Sesion</a></li>
+											<li><a href="{% url 'userprofile:register_user' %}">Registrate ;)</a></li>
+											{% endif %}
+
+											
+											<!--
+											<li class="aux-languages dropdown animate-hover" data-animate="animated fadeInUp">
+												<a href="#"><span class="language name">English</span></a>
+												<ul id="auxLanguages" class="sub-menu animate-wr">
+													<li><a href="#"><span class="language">German</span></a></li>
+													<li><span class="language language-active">English</span></li>
+													<li><a href="#"><span class="language">Greek</span></a></li>
+													<li><a href="#"><span class="language">Spanish</span></a></li>
+												</ul>
+											</li>
+											<li class="shopping-cart dropdown animate-hover" data-animate="animated fadeInUp">
+												<a href="shop-cart.html" title="View your shopping cart" style="padding-right:0;"><i class="fa fa-shopping-cart"></i><span class="amount">&pound;0</span></a>
+									
+												<ul class="sub-menu animate-wr">     
+													<li>                                       
+														<div class="dropdown-cart">
+															<span class="cart-items">You have <strong>3</strong> items in your cart</span>
+															<table class="table table-dropdown-cart">
+																<thead>
+																	<tr>
+																		<th colspan="2">Product</th>
+																		<th class="text-center">Qty</th>
+																		<th>Total</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td><img src="images/prv/product-3.png" class="img-center" alt=""></td>
+																		<td><a href="">Asus Ultra Notebook</a></td>
+																		<td class="text-center">2</td>
+																		<td>$600.99</td>
+																	</tr>
+																	<tr>
+																		<td><img src="images/prv/product-2.png" class="img-center" alt=""></td>
+																		<td><a href="">Mouse Microsoft</a></td>
+																		<td class="text-center">3</td>
+																		<td>$600.99</td>
+																	</tr>
+																	<tr>
+																		<td><img src="images/prv/product-4.png" class="img-center" alt=""></td>
+																		<td><a href="">Samsung Galaxy S4</a></td>
+																		<td class="text-center">1</td>
+																		<td>$600.99</td>
+																	</tr>
+																</tbody>
+															</table>
+															<div class="dropdown-cart-footer">
+																<div class="row">
+																	<div class="col-md-6">
+																		<a href="shop-cart.html" class="btn btn-sm btn-dark btn-icon btn-icon-right btn-cart">
+																			<span>Edit cart</span>
+																		</a>
+																	</div>
+																	<div class="col-md-6">
+																		<a href="shop-checkout-method.html" class="btn btn-sm btn-base btn-icon btn-icon-right btn-cart pull-right">
+																			<span>Procees to checkout</span>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>                                                                                                    
+												</ul>                                                                                                          
+											</li>
+											-->
+										</ul>
+									</nav> 
+								</div>
+							</div>
+						</div>
+					</div>
+				   
+					<div class="navbar navbar-wp navbar-fixed mega-nav" data-spy="affix" data-offset-top="120" role="navigation">
+						<div class="container">
+							<div class="navbar-inner">
+								<div class="navbar-header text-sm-center">
+									<a class="navbar-brand pull-left" href="{% url 'home' %}" title="La Noche">
+										<img id="desktopLogo" src="{% static "lanocheclub.png" %}"  alt="Logo LANOCHE para desktop">
+										<img id="mobileLogo" src="{% static "lanocheclub.png" %}"  alt="Logo LANOCHE para moviles">
+									</a>
+									<button type="button" class="navbar-toggle navbar-toggle-aside-menu pull-right">
+										<i class="fa fa-outdent icon-custom"></i>
+									</button>
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+										<i class="fa fa-bars icon-custom"></i>
+									</button>
+								</div>
+								<div class="navbar-collapse collapse">
+									<ul class="nav navbar-nav navbar-right">
+										<li class="hidden-md hidden-lg">
+											<div class="bg-light-gray">
+												<form class="form-horizontal form-light p-15" role="form">
+													<div class="input-group input-group-lg">
+														<input type="text" class="form-control" placeholder="Ingrese l que quiere buscar ...">
+														<span class="input-group-btn">
+															<button class="btn btn-white" type="button">
+																<i class="fa fa-search"></i>
+															</button>
+														</span>
+													</div>
+												</form>
+											</div>
+										</li>
+
+										<li class="dropdown">
+											<a href="{% url 'company:company-list' %}" class="dropdown-toggle">Todos los locales</a>
+										</li>
+										
+										<li class="dropdown dropdown-meganav mega-dropdown-fluid">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Locales</a>
+											<ul class="dropdown-menu">
+												<div class="container-fluid">
+													<div class="row">
+														<div class="col-md-2 mega-nav-section-wr">
+															<div class="mega-nav-section">
+																<img src="{% static "images/prv/wk-big-img-9.jpg" %}" class="img-responsive img-thumbnail hidden-xs hidden-sm" alt=""/>
+																<h3 class="mega-nav-section-title">Discotecas</h3>
+																<ul class="mega-nav-ul">
+																	<li><a href="{% url 'company:company-list' 'discoteca' %}">Discoteca 1</a></li>
+																	<li><a href="#">Discoteca 2</a></li>
+																	<li><a href="#">Discoteca 3</a></li>
+																	<li><a href="#">Discoteca 4</a></li>
+																	<li><a href="#">Discoteca 5</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-2 mega-nav-section-wr">
+															<div class="mega-nav-section"> 
+																<img src="{% static "images/prv/wk-big-img-10.jpg" %}" class="img-responsive img-thumbnail hidden-xs hidden-sm hidden-xs hidden-sm" alt=""/>
+																<h3 class="mega-nav-section-title">Bares</h3>
+																<ul class="mega-nav-ul">
+																	<li><a href="#">Bar 1</a></li>
+																	<li><a href="#">Bar 2</a></li>
+																	<li><a href="#">Bar 3</a></li>
+																	<li><a href="#">Bar 4</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-2 mega-nav-section-wr">
+															<div class="mega-nav-section">
+																<img src="{% static "images/prv/wk-big-img-11.jpg" %}" class="img-responsive img-thumbnail hidden-xs hidden-sm" alt=""/>
+																<h3 class="mega-nav-section-title">Karaokes</h3>
+																<ul class="mega-nav-ul">
+																	<li><a href="#">Karaoke 1</a></li>
+																	<li><a href="#">Karaoke 2</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-2 mega-nav-section-wr">
+															<div class="mega-nav-section"> 
+																<img src="{% static "images/prv/wk-big-img-10.jpg" %}" class="img-responsive img-thumbnail hidden-xs hidden-sm hidden-xs hidden-sm" alt=""/>
+																<h3 class="mega-nav-section-title">Restaurantes</h3>
+																<ul class="mega-nav-ul">
+																	<li><a href="#">Restaurante 1</a></li>
+																	<li><a href="#">Restaurante 2</a></li>
+																	<li><a href="#">Restaurante 3</a></li>
+																	<li><a href="#">Restaurante 4</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-2 mega-nav-section-wr">
+															<div class="mega-nav-section">
+																<img src="{% static "images/prv/wk-big-img-11.jpg" %}" class="img-responsive img-thumbnail hidden-xs hidden-sm" alt=""/>
+																<h3 class="mega-nav-section-title">Casinos</h3>
+																<ul class="mega-nav-ul">
+																	<li><a href="#">Casino 1</a></li>
+																	<li><a href="#">Casino 2</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="mega-nav-section">
+																<img src="{% static "images/prv/wk-big-img-12.jpg" %}" class="img-responsive img-thumbnail hidden-xs hidden-sm" alt=""/>
+																<h3 class="mega-nav-section-title">Night Clubs</h3>
+																<ul class="mega-nav-ul">
+																	<li><a href="#">Night Clubs 1</a></li>
+																	<li><a href="#">Night Clubs 2</a></li>
+																	<li><a href="#">Night Clubs 3</a></li>
+																	<li><a href="#">Night Clubs 4</a></li>
+																	<li><a href="#">Night Clubs 5</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</ul>
+										</li>
+
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorias</a>
+											<ul class="dropdown-menu">
+												<li><a href="{% url 'company:categories' %}">Todas</a></li>
+												<li><a href="{% url 'company:categorie' 'discoteca' %}">discoteca</a></li>
+												<li><a href="{% url 'company:categorie' 'bar' %}">bar</a></li>
+												<li><a href="{% url 'company:categorie' 'karaoke' %}">karaoke</a></li>
+												<li><a href="{% url 'company:categories' %}">otras</a></li>                      
+											</ul>
+										</li>
+
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Distritos</a>
+											<ul class="dropdown-menu">
+												<li><a href="{% url 'location:distritos' %}">Todas</a></li>
+												<li><a href="{% url 'location:distrito' 'los-olivos' %}">Los Olivos</a></li>
+												<li><a href="{% url 'location:distrito' 'bar' %}">SMP</a></li>
+												<li><a href="{% url 'location:distrito' 'karaoke' %}">Miraflores</a></li>
+												<li><a href="{% url 'location:distritos' %}">otros</a></li>                      
+											</ul>
+										</li>
+
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Empresas</a></li>
+												<li><a href="#">Publicidad</a></li>
+												<li><a href="#">Marketing</a></li>
+												<li><a href="#">xxxxxx</a></li>
+												<li><a href="#">yyyyyy</a></li>                      
+											</ul>
+										</li>
+										
+										<li class="dropdown">
+											<a href="{% url 'contactenos' %}" class="dropdown-toggle">Contactenos</a>
+										</li>
+
+										<li class="dropdown dropdown-aux animate-click hidden-xs" style="z-index:500;">
+											<a href="#" class="dropdown-form-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+											<ul class="dropdown-menu dropdown-menu-user animate-wr">
+												<li id="dropdownForm">
+													<div class="dropdown-form">
+														<form method="get"  class="form-horizontal form-light p-15" role="form">
+															<div class="input-group">
+																<input type="text" class="form-control" name="pattern"  placeholder="Busca a donde ir ...">
+																<span class="input-group-btn">
+																	<button class="btn btn-base" type="button">buscar</button>
+																</span>
+															</div>
+														</form>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-aux">
+											<a href="#" id="cmdAsideMenu" class="dropdown-toggle dropdown-form-toggle" title="Open slidebar">
+												<i class="fa fa-outdent"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<li class="dropdown dropdown-aux animate-click hidden-xs" data-animate-in="animated bounceInUp" data-animate-out="animated fadeOutDown" style="z-index:500;">
+						<a href="#" class="dropdown-form-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+						<ul class="dropdown-menu dropdown-menu-user animate-wr">
+							<li id="dropdownForm">
+								<div class="dropdown-form">
+									<form class="form-horizontal form-light p-15" role="form">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="I want to find ...">
+											<span class="input-group-btn">
+												<button class="btn btn-base" type="button">Go</button>
+											</span>
+										</div>
+									</form>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</header>        
+			</div>
+
+			{% block container %}{% endblock %}
+
+			<section class="slice bg-white">
+				<div class="wp-section">
+					<div class="container">
+						<div class="section-title-wr">
+							<h3 class="section-title left"><span>Our partners</span></h3>
+						</div>
+						<div class="row">
+							<div class="col-md-2 col-sm-4 col-xs-6">
+								<div class="client">
+									<a href="#">
+										<img src="{% static "images/clients/client-1.png" %}" alt="">
+									</a>
+								</div>
+							</div>
+							 <div class="col-md-2 col-sm-4 col-xs-6">
+								<div class="client">
+									<a href="#">
+										<img src="{% static "images/clients/client-2.png" %}" alt="">
+									</a>
+								</div>
+							</div>
+							 <div class="col-md-2 col-sm-4 col-xs-6">
+								<div class="client">
+									<a href="#">
+										<img src="{% static "images/clients/client-3.png" %}" alt="">
+									</a>
+								</div>
+							</div>
+							 <div class="col-md-2 col-sm-4 col-xs-6">
+								<div class="client">
+									<a href="#">
+										<img src="{% static "images/clients/client-4.png" %}" alt="">
+									</a>
+								</div>
+							</div>
+							 <div class="col-md-2 col-sm-4 col-xs-6">
+								<div class="client">
+									<a href="#">
+										<img src="{% static "images/clients/client-7.png" %}" alt="">
+									</a>
+								</div>
+							</div>
+							 <div class="col-md-2 col-sm-4 col-xs-6">
+								<div class="client">
+									<a href="#">
+										<img src="{% static "images/clients/client-6.png" %}" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="col">
+							   <h4>Contactenos</h4>
+							   <ul>
+									<li>Dirección: Lima, Los Olivos, Frente de Plaza norte	</li>
+									<li>Celular: +51 980462607</li>
+									<li>Email: <a href="mailto:lanochecluboficial@gmail.com" title="Email">lanochecluboficial@gmail.com</a></li>
+									<li>Los mejores eventos, y la gestión de su empresa que ofrezca entretenimiento nocturno.</li>
+								</ul>
+							 </div>
+						</div>
+						
+						<div class="col-md-3">
+							<div class="col">
+								<h4>Suscripción</h4>
+								<p>Regístrese si desea recibir Los mejores eventos de la semana.</p>
+								<form class="form-horizontal form-light">
+									<div class="input-group">
+										<input type="email" class="form-control" placeholder="jordan@noche.pe"/>
+										<span class="input-group-btn">
+											<button class="btn btn-base" type="button">Suscribirme</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+						<div class="col-md-3">
+							<div class="col col-social-icons">
+								<h4>Siguenos</h4>
+								<a target="_blank" href="https://www.facebook.com/LaNocheClubOficial"><i class="fa fa-facebook facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/nocheclub"><i class="fa fa-twitter twitter"></i></a>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="col">
+								<h4>Nosotros</h4>
+								<p class="no-margin">Le brindamos un servicio donde usted pueda interactuar y conocer mas lugares donde poder divertirse :) formando parte del Club "La Noche"
+								<br/><br/>
+								<a href="#" class="btn btn-block btn-base btn-icon fa-check"><span>A divertirse con lo mejor</span></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<hr/>
+					<div class="row">
+						<div class="col-lg-9 copyright">
+							2015 © LaNoche.Club Todos los derechos reservados.
+							<a href="#">Terminos y condiciones</a>
+						</div>
+						<div class="col-lg-3">
+							<a href="http://webhub.la/" title="Hecho con Amor por WebHub" target="_blank" class="">
+								<img height="30px" src="{% static "images/logo_webhub.png" %}" alt="WebHub - Servicio Web | Logo" class="pull-right"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+
+		<!-- Esenciales -->
+		<script src="{% static "js/modernizr.custom.js" %}"></script>
+		<script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+		<script src="{% static "js/jquery.mousewheel-3.0.6.pack.js" %}"></script>
+		<script src="{% static "js/jquery.easing.js" %}"></script>
+		<script src="{% static "js/jquery.metadata.js" %}"></script>
+		<script src="{% static "js/jquery.hoverup.js" %}"></script>
+		<script src="{% static "js/jquery.hoverdir.js" %}"></script>
+		<script src="{% static "js/jquery.stellar.js" %}"></script>
+
+		<!-- Boomerang mobile nav - Optional  -->
+		<script src="{% static "assets/responsive-mobile-nav/js/jquery.dlmenu.js" %}"></script>
+		<script src="{% static "assets/responsive-mobile-nav/js/jquery.dlmenu.autofill.js" %}"></script>
+
+		<!-- Forms -->
+		<script src="{% static "assets/ui-kit/js/jquery.powerful-placeholder.min.js" %}"></script> 
+		<script src="{% static "assets/ui-kit/js/cusel.min.js" %}"></script>
+		<script src="{% static "assets/sky-forms/js/jquery.form.min.js" %}"></script>
+		<script src="{% static "assets/sky-forms/js/jquery.validate.min.js" %}"></script>
+		<script src="{% static "assets/sky-forms/js/jquery.maskedinput.min.js" %}"></script>
+		<script src="{% static "assets/sky-forms/js/jquery.modal.js" %}"></script>
+
+		<!-- Assets -->
+		<script src="{% static "assets/hover-dropdown/bootstrap-hover-dropdown.min.js" %}"></script>
+		<script src="{% static "assets/page-scroller/jquery.ui.totop.min.js" %}"></script>
+		<script src="{% static "assets/mixitup/jquery.mixitup.js" %}"></script>
+		<script src="{% static "assets/mixitup/jquery.mixitup.init.js" %}"></script>
+		<script src="{% static "assets/fancybox/jquery.fancybox.pack.js" %}"></script>
+		<script src="{% static "assets/waypoints/waypoints.min.js" %}"></script>
+		<script src="{% static "assets/milestone-counter/jquery.countTo.js" %}"></script>
+		<script src="{% static "assets/easy-pie-chart/js/jquery.easypiechart.js" %}"></script>
+		<script src="{% static "assets/social-buttons/js/rrssb.min.js" %}"></script>
+		<script src="{% static "assets/nouislider/js/jquery.nouislider.min.js" %}"></script>
+		<script src="{% static "assets/owl-carousel/owl.carousel.js" %}"></script>
+		<script src="{% static "assets/bootstrap/js/tooltip.js" %}"></script>
+		<script src="{% static "assets/bootstrap/js/popover.js" %}"></script>
+
+		<!-- Sripts for individual pages, depending on what plug-ins are used -->
+
+		<!-- Sripts for individual pages, depending on what plug-ins are used -->
+		<script src="{% static "assets/layerslider/js/greensock.js" %}" type="text/javascript"></script>
+		<script src="{% static "assets/layerslider/js/layerslider.transitions.js" %}" type="text/javascript"></script>
+		<script src="{% static "assets/layerslider/js/layerslider.kreaturamedia.jquery.js" %}" type="text/javascript"></script>
+		<!-- Initializing the slider -->
+		<script>
+			jQuery("#layerslider").layerSlider({
+				pauseOnHover: true,
+				autoPlayVideos: false,
+				skinsPath: 'assets/layerslider/skins/',
+				responsive: false,
+				responsiveUnder: 1280,
+				layersContainer: 1280,
+				skin: 'borderlessdark3d',
+				hoverPrevNext: true,
+			});
+		</script>
+
+		<!-- Boomerang App JS -->
+		<script src="{% static "js/wp.app.js" %}"></script>
+		<!--[if lt IE 9]>
+			<script src="{% static "js/html5shiv.js" %}" ></script>
+			<script src="{% static "js/respond.min.js" %}" ></script>
+		<![endif]-->
+
+		<!-- Temp You can remove this once you started to work on your project -->
+		<script src="{% static "js/jquery.cookie.js" %}"></script>
+		<script src="{% static "js/wp.switcher.js" %}"></script>
+
+	</body>
+</html>
+
+

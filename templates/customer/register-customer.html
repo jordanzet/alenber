@@ -1,0 +1,275 @@
+{% extends 'base2.html' %}
+{% block container %}
+
+{% load static from staticfiles %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Pasos para registrarse</h3>
+			</div>
+			<div class="col-md-12 registro-tab">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active col-md-4">
+						<a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+							<h5>Paso 1:</h5>
+							<div class="col-md-12 text-center">
+								<img src="{% static "images/15-UserAdmin.png" %}">
+								<h4>crear el perfil de la empresa</h4>
+							</div>
+						</a>
+					</li>
+					<li role="presentation" class="col-md-4">
+						<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+							<h5>Paso 2:</h5>
+							<div class="col-md-8 text-center">
+								<img src="{% static "images/15-UserAdmin.png" %}">
+								<h4>Designar a la persona que sera el Usuario-Admin</h4>
+							</div>
+						</a>
+					</li>
+					<li role="presentation" class="col-md-4">
+						<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+							<h5>Paso 3:</h5>
+							<div class="col-md-8 text-center">
+								<img src="{% static "images/15-UserAdmin.png" %}">
+								<h4>El usuario-administrador ingresando a su cuenta podrá crear mas usuarios</h4>
+							</div>
+						</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<div class="col-md-6">
+							<form class="form-inline">
+								<div class="form-group">
+									<label for="ruc_customer">RUC</label>
+									<input type="text" class="form-control" id="ruc_customer" placeholder="/...">
+								</div>
+								<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Verificar</button>
+							</form>
+						</div>
+						<div class="col-md-6">
+							<h6><i class="fa fa-check fa-2x bg-green "></i> El umero ingreao tiene 10 digitos, deberia tener 12 como minimo</h6>
+							<h6><i class="fa fa-check fa-2x bg-green "></i> El numero de RUC ingresao es incorrecto</h6>
+							<h6><i class="fa fa-check fa-2x bg-green "></i> Puedes registrar la empresa</h6>
+						</div>
+
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">
+						<h3>Designación del usuario-Administrador</h3>
+						<h5>El usuario-Admin* tendra los siguientes permisos</h5>
+						<ul>
+							<li>Al usuario administrador le llegara un correo de confirmacion de creacion de cuenta, al crear su cuenta también estará autorizando la creación de  la cuenta www.alenber/antamina</li>
+							<li>Sera el único que podrá crear usuarios a los compradores</li>
+							<li>Podrá revisar el estado de las adquisiciones de los demás usuarios</li>
+							<li>Tambien podramandar requerimientos y odenes de compra como cualquier otro usuario</li>
+							<p>* se recomienda que el Usuario-Administrador sea el gerente de logistica, Gerente de compras, Jefe de compras o un cargo con funciones equivalentes.</p>
+						</ul>
+						<h4>¿Quien sera el Usuario-Administrador?</h4>
+						<div class="col-md-4">
+							<img src="{% static "images/iconos/17-CrearUserAdmin.png" %}" alt="">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="Nombre">
+							<input type="text" placeholder="Cargo">
+							<input type="text" placeholder="Email">
+						</div>
+
+						<button>ir al último paso</button>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="messages">
+						<h3>Creación de Usuarios</h3>
+						<p>El usuario administrador deberá ingresar a su correo para confirmar la creación de su cuenta</p>
+						<p>El Usuario-Administrador tambien sera un usuario-Comprador, si se requiere crear más Usuarios-Compradores se deberá solicitar la creación del mismo al Usuario-Administrador.</p>
+						<p>Una vez que los usuarios hayan confrmado la creación de su cuenta, podrán publicar requerimientos y enviar ordenes de compra, por medio de alenber.com</p>
+						<button>Finalizar</button>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="settings">44444444</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- imagen de portada de la empresa -->
+	<div class="img-portada">
+		<img src="{% static "images/empresa/Antamina.png" %}">
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-3">
+					<!-- imagen de perfil de la empresa -->
+					<img src="{% static "images/logos/Antamina.png" %}" width="100px">
+				</div>
+				<div class="col-md-9">
+					<h4>Compañia minera Antamina S.A.</h4>
+					<div class="col-md-2">Perfil</div>
+					<div class="col-md-2">Productos</div>
+					<div class="col-md-3">Contacto</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<H4>Descripción de la empresa</H4>
+				<hr>
+				<div class="col-md-4">
+					<h4>Razon Social: </h4>
+					<h4>RUC: </h4>
+					<h4>Oficina Principal: </h4>
+					<h4>Principales productos: </h4>
+					<h4>Sector: </h4>
+					<h4>Inicio de Actividades desde: </h4>
+					<h4>Numero de trabajadores: </h4>
+					<h4>Sitio web: </h4>
+				</div>
+				<div class="col-md-6">
+					<h4>Compañia Minera Antamina S.A.</h4>
+					<h4>23423423353534</h4>
+					<h4>Av el derby, Santiafgo de surco, lima, peru</h4>
+					<h4>Cobre , zinc, molibdeno</h4>
+					<h4>Minería </h4>
+					<h4>1995</h4>
+					<h4>100 - 5000 trabajadores </h4>
+					<h4><a target="_blank" href="http://www.antamina.com">www.antamina.com</a> </h4>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<h4>Productos</h4>
+				<hr>
+
+				<div class="col-md-4">
+					<h3>Todos</h3>
+					<ul>
+						<li>+ Crear categoria</li>
+						<li></li>
+						<li></li>
+					</ul>					
+				</div>
+				<div class="col-md-8">
+					<div class="col-md-4">
+						<div class="subir-img">
+							<img src="{% static "images/11-Upload-36.png" %}" alt="">
+							<h6>Subir fotografia del producto</h6>
+						</div>
+						<input type="text" placeholder="Escribir nombre del producto">
+
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<h4>Contacto</h4>
+				<hr>
+				<div class="col-md-6">
+					<div class="col-md-5">
+						<div class="subir-mapa">
+							<img src="{% static "images/iconos/40-Pointern-30.png" %}" alt="">
+						</div>
+					</div>
+					<div class="col-md-7">
+						<h3>Oficina prinicpal</h3>
+						<input type="text" placeholder="Region">
+						<input type="text" placeholder="Provincia">
+						<input type="text" placeholder="Distrito"> <br>
+						<input type="text" placeholder="Dirección">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-5">
+						<div class="subir-mapa">
+							<img src="{% static "images/iconos/40-Pointern-30.png" %}" alt="">
+						</div>
+					</div>
+					<div class="col-md-7">
+						<h3>Oficina prinicpal</h3>
+						<input type="text" placeholder="Region">
+						<input type="text" placeholder="Provincia">
+						<input type="text" placeholder="Distrito"> <br>
+						<input type="text" placeholder="Dirección">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<h4>Teléfono y Correos</h4>
+				<hr>
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<input type="text" placeholder="Titulo">
+					<input type="text" placeholder="Teléfono">
+					<input type="text" placeholder="Correo electrónico">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<section class="slice bg-white">
+		<div class="wp-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3">
+						<div class="wp-block default user-form"> 
+							<div class="form-header">
+								<h2>Create tu cuenta</h2>
+							</div>
+							<div class="form-body">
+								<form method="post" action="" id="frmLogin" class="sky-form">{% csrf_token %}
+									<fieldset>
+										<section>
+											<div class="form-group">
+												<label class="label">Usuario</label>
+												<label class="input">
+													<i class="icon-append fa fa-user"></i>
+													<input type="text" name="username">
+												</label>
+											</div>
+										</section>
+										<section>
+											<div class="form-group">
+												<label class="label">Email</label>
+												<label class="input">
+													<i class="icon-append fa fa-user"></i>
+													<input type="email" name="email">
+												</label>
+											</div>
+										</section>
+										<section>
+											<div class="form-group">
+												<label class="label">Password</label>
+												<label class="input">
+													<i class="icon-append fa fa-lock"></i>
+													<input type="password" name="password1">
+												</label>
+											</div>     
+										</section> 
+										<section>
+											<div class="form-group">
+												<label class="label">Repetir Password</label>
+												<label class="input">
+													<i class="icon-append fa fa-lock"></i>
+													<input type="password" name="password2">
+												</label>
+											</div>     
+										</section>
+
+										<section>
+											<button class="btn btn-base btn-icon btn-icon-right btn-sign-in pull-right" type="submit">
+												<span>Enviar</span>
+											</button>
+										</section>
+									</fieldset>  
+								</form>    
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

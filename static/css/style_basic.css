@@ -1,0 +1,101 @@
+body{
+	font-family: roboto;
+	font-size: 13px;
+	color:#333;
+}
+
+.container-cabecera{
+	width:100%; /*89.4%;*/
+	height: 65px;
+	background-color: #eef5fb;
+	padding: 0px;
+}
+
+.container-logo{
+	float: left;
+	position: relative;
+	width:150px; 
+	/*height:35px;
+	top:25%;
+	margin-left: 4%;*/
+	background: #1b94fa; /*white;*/
+	/*border-radius: 4px;*/
+	padding: 5px;
+}
+
+.logo_colibri{
+	position: relative;
+	/*top:50%;
+	transform:translateY(-50%);*/
+}
+
+.white13{
+	font-size: 13px;
+	color: #fff;
+}
+.title20{
+	font-size: 20px;
+	color: #557387;
+}
+
+.container-title{
+	position: relative;
+	width:700px;
+	height: 35px;
+	top: 25%;
+	float: left;
+	margin-left: 70px;/* 12.3%;*/
+}
+
+
+
+/*  colores  */
+
+.bg-red{
+	background: red;
+	color: white;
+}
+.bg-green{
+	background: green;
+	color: white;
+	border-radius: 50%;
+}
+
+.img-portada{
+}
+.img-portada img{
+	width: 100%;
+}
+
+
+/* agregado por jordan */
+
+.registro-tab{
+
+	margin: 20px;
+	padding: 20px;
+	width: 100%;
+}
+
+.subir-img{
+	background: rgba(0,0,130,.4);
+	padding: 60px 10px ;
+	text-align: center;
+}
+
+.subir-mapa{
+	background: rgba(0,0,130,.4);
+	padding: 60px 10px ;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+

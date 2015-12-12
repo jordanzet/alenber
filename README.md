@@ -1,1 +1,12 @@
 # alenber
+
+
+grupos
+=====
+
+*comprador
+*proveedor
+*
+
+
+
