@@ -11,6 +11,15 @@ class UserCreationEmailForm(UserCreationForm):
 		fields = ('username', 'email')
 
 	#def clean_email
+
+class UserCreationAdminForm(UserCreationForm):
+	nombres_y_apellidos = forms.CharField(max_length=250, help_text='nombre de Usuario',)
+	email=forms.EmailField()
+	class Meta:
+		model=User
+		fields = ('nombres_y_apellidos','username', 'email')
+
+	#def clean_email
 	
 
 class EmailAuthenticationForm(forms.Form):

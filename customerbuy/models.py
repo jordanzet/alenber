@@ -4,16 +4,13 @@ from django.contrib.auth.models import User
 from datetime import datetime
 import datetime
 
-##############################
-###  Empresas Compradoras  ###
-##############################
 
 class CustomerBuy(models.Model):
 	"""Empresa que compra """
 	customer = models.OneToOneField(User)
 	ruc = models.BigIntegerField(help_text='Ingrese el numero de RUC', verbose_name='RUC de la empresa') #ruc debe tener 12 digitos
-	logo = models.ImageField(upload_to='customer_buy_logo/',)
-	foto_institucional = models.ImageField(upload_to='customer_buy_foto_portada/',)
+	logo = models.ImageField(upload_to='customer_buy_logo/',blank=True)
+	foto_institucional = models.ImageField(upload_to='customer_buy_foto_portada/',blank=True)
 	razon_social = models.CharField(max_length=150,help_text='ingrese la razon social', verbose_name='Razon Social de la Empresa')
 	phone = models.IntegerField(blank=True, help_text='Ingrese su Numero de Telefono', verbose_name='Telefono') # tipo de telefono si es bitel, nextel o claro
 	cel = models.IntegerField(blank=True, help_text='Ingrese su Numero de celular', verbose_name='Celular')
@@ -98,7 +95,7 @@ class ContactCustomerBuy(models.Model):
 	title = models.CharField(max_length=50) #lugar_o_area
 	telefono = models.IntegerField()
 	email = models.EmailField()
-	customer_provider = models.ForeignKey(CustomerBuy)
+	customer_buy = models.ForeignKey(CustomerBuy)
 	
 	class Meta:
 		verbose_name = "Dato de Contacto de la empresa compradora"
@@ -106,4 +103,3 @@ class ContactCustomerBuy(models.Model):
 
 	def __unicode__(self):
 		self.title
-

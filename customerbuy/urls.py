@@ -3,9 +3,15 @@ from customerbuy import views
 #|from .views import RegisterView
 
 urlpatterns = [
-	url(r'$',views.customer_buy,name='customer_buy'),
-	url(r'registro/',views.signup_customer_buy,name='signup_customer_buy'),
-	#url(r'editar-perfil/',views.edit_profile_buy,name='edit_profile_buy'),
+	url(r'^$',views.index,name='index'),
+	url(r'^registro/$',views.signup,name='signup'),
+	url(r'^registro/paso1/$',views.step1,name='step1'),
+	url(r'^registro/paso2/$',views.step2,name='step2'),
+	url(r'^registro/paso3/$',views.step3,name='step3'),
+	#url(r'^registro/paso4',views.step4,name='step4'),
+
+	#url(r'^editar-perfil/',views.register,name='register_profile_customer_buy'),
 	#url(r'salir', views.logout_user, name='logout_user'),
-	#url(r'^c/(?P<usuario>[-\w]+)/$',views.profile_customer_buy, name='profile_customer_buy'),
+	url(r'^(?P<usuario>[-\w]+)/$',views.profile, name='profile'),
+	url(r'^(?P<usuario>[-\w]+)/admin/$',views.admin, name='admin'),
 ]

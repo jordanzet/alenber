@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es"> 
 <head>
-	<meta charset="UTF=8">
+	<meta charset="UTF-8">
 	<link rel='icon' type="image/png" href="images/colibri-15.png">
 	<title> Aelnber.com {% block title %} {% endblock %} </title>
 	<link href="{% static "css/style.css" %}" type="txt.css" rel="stylesheet">
@@ -76,7 +76,6 @@
 				<a href=" ">&iquestOlvidaste tu contrase&ntilde;a?</a>
 			</div>	
 			<div class="container-totadiva-nr">
-				
 				<div class="no_registrado">
 					<p>&iquestTodav&iacutea no est&aacutes registrado?</p>
 				</div>
@@ -658,7 +657,6 @@
 	{% block container %}
 	{% endblock %}
 
-
 	<script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
 	<script src="{% static "js/bootstrap.min.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/script.js" %}"></script>
@@ -666,7 +664,7 @@
 	<script type="text/javascript">
 		$('button#registra-empresa').magnificPopup({
 			items:{
-				src:'<div class="registro-de-empresa"><h4>Puedes registrarte de dos formas</h4><div class="col-md-6"><div class="azul-curvo">Como empresa <h3>COMPRADORA</h3> </div><h4>Como empresa compradora podrá</h4><ul class="listado-check"><li>Publicar requerimientos</li><li>Recibir cotizaciones</li><li>Enviar Órdenes de compra</li></ul><button class="registro-empresa-comprador"><p>Registrate como comprador<p><img src="{% static "images/13-registrar-empresa-white.png" %}" align="middle"></button></div><div class="col-md-6"><div class="anaranjado-curvo">Como empresa <h3>PROVEEDORA</h3></div><h4>Como empresa proveedora podrá</h4><ul class="listado-check"><li>Enviar Cotizaciones</li><li>Recibir Órdenes de compra</li> <br></ul><button class="registro-empresa-proveedor"><p>Registrate como proveedor<p><img src="{% static "images/13-registrar-empresa-white.png" %}" align="middle"></button></div></div>',
+				src:'<div class="registro-de-empresa"><h4>Puedes registrarte de dos formas</h4><div class="col-md-6"><div class="azul-curvo">Como empresa <h3>COMPRADORA</h3> </div><h4>Como empresa compradora podrá</h4><ul class="listado-check"><li>Publicar requerimientos</li><li>Recibir cotizaciones</li><li>Enviar Órdenes de compra</li></ul><button class="registro-empresa-comprador"><a href="{% url 'buy:signup' %}"><p>Registrate como comprador<p><img src="{% static "images/13-registrar-empresa-white.png" %}" align="middle"> </a></button></div><div class="col-md-6"><div class="anaranjado-curvo">Como empresa <h3>PROVEEDORA</h3></div><h4>Como empresa proveedora podrá</h4><ul class="listado-check"><li>Enviar Cotizaciones</li><li>Recibir Órdenes de compra</li> <br></ul><button class="registro-empresa-proveedor"><a href="{% url 'provider:signup' %}"><p>Registrate como proveedor<p><img src="{% static "images/13-registrar-empresa-white.png" %}" align="middle"></a></button></div></div>',
 				type: 'inline'
 			},
 			closeBtnInside: true

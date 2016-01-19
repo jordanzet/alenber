@@ -1,0 +1,187 @@
+body{
+	font-family: roboto;
+	font-size: 13px;
+	color:#333;
+}
+
+.clear {
+	  clear: both;
+	  display: block;
+	  overflow: hidden;
+	  visibility: hidden;
+	  width: 0px;
+	  height: 0px;
+}
+
+.float-left{
+	float: left;
+	position: relative;
+}
+
+.title20{
+	font-size: 20px;
+	color: #557387;
+}
+
+.white13{
+	font-size: 13px;
+	color: #fff;
+
+}
+
+.gris13{
+	font-size: 13px;
+	color:#8496a3;
+
+}
+
+.container-menu-bar{
+	position: fixed;
+	width:10.6%;
+	margin-left: 89.22%;
+}
+
+.container-logo-colibri{
+	float: right;
+	position: relative;
+	height: 65px;
+	width:100%;
+	background: #1b94fa;
+	text-align: center;
+}
+
+.logo_colibri{
+	position: relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+.container-menu{
+	height: 670px;
+	background: #329ffb;
+	width: 100%;
+}
+
+.container-menu-sup-icon{
+	text-align: right;
+	margin-right:5px;	
+	margin-top: 12px;
+}
+
+.container-menu-button{
+	position:relative; 
+	width:97%; 	
+	height: 44px;
+	background: none;
+	border:none;
+}
+
+.container-menu-button img{
+	position: relative;
+	float: right;
+}
+
+.container-menu-button p{
+	position: relative;
+	float: right;
+	margin-top: 12px;
+	margin-right: 5px;
+}
+
+.container-cabecera{
+	width:89.4%;
+	height: 65px;
+	background-color: #eef5fb;
+	padding: 0px;
+}
+
+.container-logo{
+	float: left;
+	position: relative;
+	width:50px; 
+	height:35px;
+	top:25%;
+	margin-left: 4%;
+	background: white;
+	border-radius: 4px;
+	
+}
+
+.container-logo img{
+	top:50%;
+	position: relative;
+	transform:translateY(-20%);
+}
+
+.container-title{
+	position: relative;
+	width:700px;
+	height: 35px;
+	top: 25%;
+	ransform:translateY(-50%);
+	float: left;
+	margin-left: 12.3%;
+}
+
+.container-work-area{
+	margin-left: 18.3%;
+	position: relative;
+	width: 700px;
+	height: 1000px;
+	margin-top: 20px;
+}
+
+/*Work Area*/
+.container-select{
+	width: 100%;
+	height: 300px;
+	position: relative;
+	display: block;
+	margin-left: 70px;
+	margin-top: 130px;
+}
+
+
+.req-unico{
+	text-align: center;
+	float: left;
+	position: relative;
+	display: inline-block;
+}
+
+.req-unico-button{
+	background: none;
+	padding-top: 12px;
+	margin-bottom: 10px;
+	border:none;
+	
+}
+
+.req-unico-button:hover{
+	border-color: #1b94fa;
+}
+
+.req-unico-button a:hover{
+	text-decoration:none;
+}
+
+.req-unico a{
+	text-align: center;
+	display: inline-block;
+}
+
+.req-unico:hover{
+	color:#8496a3;
+}
+
+.line-division{
+	height: 100%;
+	float: left;
+	position: relative;
+	display: block;
+}
+
+.line-division img{
+	margin-top: 100px;
+
+}

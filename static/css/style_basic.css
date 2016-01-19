@@ -1,101 +1,70 @@
-body{
-	font-family: roboto;
-	font-size: 13px;
-	color:#333;
+body {
+  font-family: roboto;
+  font-size: 13px;
+  color: #333;
 }
-
-.container-cabecera{
-	width:100%; /*89.4%;*/
-	height: 65px;
-	background-color: #eef5fb;
-	padding: 0px;
+.container-cabecera {
+  width: 100%;
+  height: 65px;
+  background-color: #eef5fb;
+  padding: 0;
 }
-
-.container-logo{
-	float: left;
-	position: relative;
-	width:150px; 
-	/*height:35px;
-	top:25%;
-	margin-left: 4%;*/
-	background: #1b94fa; /*white;*/
-	/*border-radius: 4px;*/
-	padding: 5px;
+.container-logo {
+  float: left;
+  position: relative;
+  width: 150px;
+  background: #1b94fa;
+  padding: 5px;
 }
-
-.logo_colibri{
-	position: relative;
-	/*top:50%;
-	transform:translateY(-50%);*/
+.logo_colibri {
+  position: relative;
 }
-
-.white13{
-	font-size: 13px;
-	color: #fff;
+.white13 {
+  font-size: 13px;
+  color: #fff;
 }
-.title20{
-	font-size: 20px;
-	color: #557387;
+.title20 {
+  font-size: 20px;
+  color: #557387;
 }
-
-.container-title{
-	position: relative;
-	width:700px;
-	height: 35px;
-	top: 25%;
-	float: left;
-	margin-left: 70px;/* 12.3%;*/
+.container-title {
+  position: relative;
+  width: 700px;
+  height: 35px;
+  top: 25%;
+  float: left;
+  margin-left: 70px;
 }
-
-
-
-/*  colores  */
-
-.bg-red{
-	background: red;
-	color: white;
+.bg-red {
+  background: #f00;
+  color: #fff;
 }
-.bg-green{
-	background: green;
-	color: white;
-	border-radius: 50%;
+.bg-green {
+  background: #008000;
+  color: #fff;
+  border-radius: 50%;
 }
-
-.img-portada{
+.img-portada img {
+  width: 100%;
 }
-.img-portada img{
-	width: 100%;
+.sombra-gris {
+  background: #f3f3f3;
 }
-
-
-/* agregado por jordan */
-
-.registro-tab{
-
-	margin: 20px;
-	padding: 20px;
-	width: 100%;
+.sombra-gruesa-negra {
+  font-weight: 700;
 }
-
-.subir-img{
-	background: rgba(0,0,130,.4);
-	padding: 60px 10px ;
-	text-align: center;
+button.btn-azul {
+  background: #00f;
+  color: #fff;
+  border-radius: 0.2em;
+  padding: 5px 15px;
 }
-
-.subir-mapa{
-	background: rgba(0,0,130,.4);
-	padding: 60px 10px ;
-	text-align: center;
+button.btn-verde {
+  background: #008000;
+  color: #fff;
+  border-radius: 0.2em;
+  padding: 5px 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
+.texto-anaranjado {
+  color: #ffa500;
+}

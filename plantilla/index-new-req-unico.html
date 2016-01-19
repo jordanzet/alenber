@@ -1,0 +1,285 @@
+<head>
+	<meta charset="UTF=8">
+	<link rel='icon' type="image/png" href="images/colibri-15.png">
+	<title> Alenber.com </title>
+	<link href="css/style-new-req-unico.css" type="txt.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+
+
+	<div class="container-menu-bar">
+		<div class="container-logo-colibri">
+			<div class="logo_colibri">
+				<img src="images/colibri-V3-white.png" alt="Logo" width="42%" height="55%">
+				<div class="clear"></div>
+				<p class="white13">A l e n b e r . c o m</p>
+			</div>
+		</div>
+
+		<div class="container-menu">
+			<div class="clear"></div>
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/29-Buzon-white-blue-36.png" class="button-img" onmouseover="this.src='images/29-Buzon-blue-36.png'" onmouseout="this.src='images/29-Buzon-white-blue-36.png'">
+					<p class="container-menu-text white13" >
+						Bandeja
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/21-Pub-req-blue-36.png" class="button-img" onmouseover="this.src='images/21-Pub-req-blue-36.png'" onmouseout="this.src='images/21-Pub-req-blue-36.png'">
+					<p class="container-menu-text white13" >
+						Nuevo Req
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/22-Req-en-Cot-white-blue36.png" class="button-img" onmouseover="this.src='images/22-Req-en-Cot-blue-36.png'" onmouseout="this.src='images/22-Req-en-Cot-white-blue36.png'">
+					<p class="container-menu-text white13" >
+						Cotizaciones
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/23-Req-en-Comp-all-white-36.png" class="button-img" onmouseover="this.src='images/23-Req-en-Comp-blue-36.png'" onmouseout="this.src='images/23-Req-en-Comp-all-white-36.png'">
+					<p class="container-menu-text white13" >
+						Pedidos
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon" style="margin-top:40px;">
+				<button class="container-menu-button" >
+					<img src="images/24-Historico-allwhite-36.png" class="button-img" onmouseover="this.src='images/24-Historico-blue-36.png'" onmouseout="this.src='images/24-Historico-allwhite-36.png'">
+					<p class="container-menu-text white13" >
+						Hist&oacute;rico
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/25-Estadisticas-allwhite-36.png" class="button-img" onmouseover="this.src='images/25-Estadisticas-blue-36.png'" onmouseout="this.src='images/25-Estadisticas-allwhite-36.png'">
+					<p class="container-menu-text white13" >
+						Estad&iacute;stica
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon" style="margin-top:180px;">
+				<button class="container-menu-button" >
+					<img src="images/pictures/Elias-circle.png">
+					<p class="container-menu-text white13" >
+						ELIAS
+					</p>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-cabecera">
+		<div class="container-logo">
+			<img src="images/logos/Antamina.png" style="max-width:100%; max-height:100%;top:20%">
+		</div>
+
+		<div class="container-title">
+			<div class="title20">
+				Nuevo requerimiento
+			</div>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="container-work-area">
+		<div class="paper">
+			<div class="cabecera">
+				<img src="images/logos/Antamina.png">
+				<div class="cabecera-text">
+					<div class="gris18">
+						Compa&ntilde;&iacute;a Minera Antamina
+					</div>
+					<div class="gris14">
+						Requerimiento de Compras
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<canvas id="line" width="800px" height="2px"></canvas>
+
+			<div class="container-nombre-pedido">
+				
+				<form class="nombre-req" action="" method="get">
+					<div class="black18" style="width:170px; float:left; position:relative;">
+						Requerimiento:
+					</div>
+					<input class="blue16" type="text" name="nombre-requerimiento" id="nombre-req-input" width="400px" placeholder=" ">
+				</form>
+				<div class="clear"></div>
+			
+				<form class="nombre-req" action="" method="get" style="margin-top:20px;">
+					<div class="gris13" style="width:170px; float:left; position:relative;">
+						Cantidad:
+					</div>
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-input" width="400px" placeholder=" ">
+				</form>
+				<div class="clear"></div>
+			
+				<form class="nombre-req" action="" method="get">
+					<div class="gris13" style="width:170px; float:left; position:relative;">
+						Para entregar en:
+					</div>
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-input50" width="400px" placeholder=" Regi&oacute;n">
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-input50" width="400px" placeholder=" Provincia">
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-input50" width="400px" placeholder=" Distrito">
+				</form>
+				<div class="clear"></div>
+			
+				<form class="nombre-req" action="" method="get">
+					<div class="gris13" style="width:170px; float:left; position:relative;">
+						Plazo m&aacute;ximo de entrega:
+					</div>
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-input" width="400px" placeholder=" " >
+				</form>	
+			</div>
+
+			<div class="container-desc">
+				
+				<form class="nombre-req-tec" action="" method="get">
+					<div class="black15" style="width:170px; float:left; position:relative;">
+						Detalles t&eacute;cnicos:
+					</div>
+				</form>
+				<div class="clear"></div>
+				
+				<form class="nombre-req-tec" action="" method="get" style="margin-top:7px;">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-cartec" placeholder="Carater&iacute;stica t&eacute;cnica 1">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-valor" placeholder="Valor 1">
+				</form>
+				<form class="nombre-req-tec" action="" method="get" style="margin-top:7px;">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-cartec" placeholder="Carater&iacute;stica t&eacute;cnica 1">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-valor" placeholder="Valor 1">
+				</form>
+
+				<div class="new-desc">
+					<div class="new-desc-cartec gris13">
+
+					</div> 
+
+					<div class="new-des-valor">
+
+					</div>
+					
+				</div>
+				
+
+				<form class="nombre-req-tec" action="" method="get" style="margin-top:7px;">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-cartec1" placeholder="Carater&iacute;stica t&eacute;cnica 1">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-valor1" placeholder="Valor 1">
+				</form>
+
+
+				<button id="add-cartec"> Agregar</button>
+				
+				<div class="clear"></div>
+
+				<div clas="cartec-adicional">
+					<textarea name="cartec-adicional" id="cartec-adicional-textarea" placeholder="Escribir aqu&iacute; las caracter&iacute;sticas t&eacute;cnicas adicioneles">
+					</textarea>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="container-desc">
+				
+				<form class="nombre-req-tec" action="" method="get">
+					<div class="black15" style="width:170px; float:left; position:relative;">
+						Detalles comerciales:
+					</div>
+				</form>
+				<div class="clear"></div>
+				
+				
+				<form class="nombre-req" action="" method="get" style="margin-top:20px;">
+					<div class="gris13" style="width:350px; float:left; position:relative;">
+						Tipo de pago:
+					</div>
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-tec-input-valor" placeholder=" Valor">
+				</form>
+				<div class="clear"></div>
+
+				
+				<form class="nombre-req" action="" method="get" style="margin-top:20px;">
+					<div class="gris13" style="width:350px; float:left; position:relative;">
+						Garant&iacute;a:
+					</div>
+					<input class="black13" type="text" name="nombre-requerimiento" id="nombre-req-tec-input-valor" placeholder=" Valor">
+				</form>
+				<div class="clear"></div>
+
+
+				<div class="new-desc">
+					<div class="new-desc-cartec-comer gris13">
+
+					</div> 
+
+					<div class="new-des-valor-comer">
+
+					</div>
+				</div>
+
+
+				<form class="nombre-req-tec" action="" method="get" style="margin-top:7px;">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-cartec2" placeholder="Carater&iacute;stica Comercial">
+					<input type="text" name="nombre-requerimiento" id="nombre-req-tec-input-valor2" placeholder="Valor 1">
+				</form>
+
+				<button id="add-cartec-comer"> Agregar</button>
+				<div class="clear"></div>
+
+				<div clas="cartec-adicional">
+					<textarea name="cartec-adicional" id="cartec-adicional-textarea" placeholder="Escribir aqu&iacute; las caracter&iacute;sticas t&eacute;cnicas adicioneles">
+					</textarea>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="button-publicar">
+			<button id="id-button-publicar">
+				<img src="images/106-Publicar.png"  align="middle">
+				<a href="Index2.html">Publicar requerimiento</a>
+			</button>
+		</div>
+
+	</div>
+
+
+
+	<script>
+		var c = document.getElementById("line");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(20, 0);
+		ctx.lineTo(600, 0);
+		ctx.lineWidth=1;
+		ctx.strokeStyle='#bfe0ec';
+		ctx.stroke();
+	</script>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

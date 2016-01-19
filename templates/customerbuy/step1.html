@@ -1,0 +1,65 @@
+{% extends 'base2.html' %}
+{% block container %}
+{% load static from staticfiles %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Pasos para registrarse</h2> <br>
+				<div class="col-md-4">
+					<h3 class="sombra-gruesa-negra">Paso 1:</h3>
+					<div class="col-md-8 text-center sombra-gris">
+						<img src="{% static "images/iconos/14-company_profile-65.png" %}">
+						<h4>crear el perfil de la empresa</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3>Paso 2:</h3>
+					<div class="col-md-9 text-center">
+						<img src="{% static "images/iconos/15-UserAdmin.png" %}">
+						<h4>Designar a la persona que sera el Usuario-Admin</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3>Paso 3:</h3>
+					<div class="col-md-9 text-center">
+						<img src="{% static "images/iconos/16-NewUser.png" %}">
+						<h4>El usuario-administrador ingresando a su cuenta podrá crear mas usuarios</h4>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-12">
+				<br><br><br><br><br><br>
+				<div class="col-md-4">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="ruc_customer">RUC</label>
+							<input type="text" class="form-control" id="ruc_customer" placeholder="/...">
+						</div>
+						<button type="submit" class="btn btn-azul"><i class="fa fa-search"></i> Verificar</button>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<p>
+						<img src="{% static "images/iconos/125-question-red.png" %}" alt=""> El número ingresado tiene 10 digitos, deberia tener 12 digfitos</p>
+					<p>
+						<img src="{% static "images/iconos/125-question-red.png" %}" alt=""> El número de RUC ingresado es incorrecto</p>
+					<p>
+						<img src="{% static "images/iconos/120-Check-circle-green.png" %}" alt=""> Puedes registrar la empresa</p>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<form action="" method="post">
+					{% csrf_token %}
+					{{form.as_p}}
+					<input type="submit" value="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+

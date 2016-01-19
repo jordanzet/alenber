@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+{% block container %}
+{% load static from staticfiles %}
+
+{% if user.is_authenticated %}
+	<li><a href="#"> Bienvenido - {{user.username}}</a></li>
+	<li><a href="{% url 'users:logout_user' %}">Cerrar Sesion</a></li>
+{% else %}
+	<li><a href="#">Iniciar Sesion</a></li>
+	<li><a href="#">Registrate ;)</a></li>
+{% endif %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Registro de cliente</h2> <h1> PROVEEDOR</h1>	<br><br>		
+			<form action="" method="post">
+				{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" value="submit">
+				
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

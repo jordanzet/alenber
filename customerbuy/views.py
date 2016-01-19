@@ -10,17 +10,18 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
 from django.views.generic.edit import FormView
 
-
 from .models import CustomerBuy
-from users.forms import UserCreationEmailForm,EmailAuthenticationForm
+from users.forms import UserCreationEmailForm, EmailAuthenticationForm, UserCreationAdminForm
+from .forms import *
 
-def customer_buy(request):
+def index(request):
 	""" pagina informativa de marketing y publicidad de un cliente comprador"""
 	usuario = request.user
-	return render_to_response('base.html',{'usuario': usuario},context_instance=RequestContext(request))
+	template = 'customerbuy/index.html'
+	return render_to_response(template,{'usuario': usuario},context_instance=RequestContext(request))
 
-def signup_customer_buy(request):
-	"""registro de cliente comprador"""
+def signup(request):
+	"""registro basico del cliente comprador"""
 	form = UserCreationEmailForm(request.POST or None)
 	if form.is_valid():
 		comp = form.save()
@@ -31,44 +32,79 @@ def signup_customer_buy(request):
 		if user is not None:
 			if user.is_active: login(request, user)
 
-		return HttpResponseRedirect("/comprador/editar-perfil/")
+		return HttpResponseRedirect("/comprador/registro/paso1")
 
 	# crear el user profile
 	# redireccionar al home
-	return render(request,'customer/signup.html',{'form':form})
+	template = 'customerbuy/signup.html'
+	return render(request, template,{'form':form})
 	#return render_to_response("customer/signup.html", {'form': form,}, context_instance=RequestContext(request))
 
-
-def signup_profile_customer_buy(request):
+def step1(request):
+	""" Paso 1 del registro de perfil """
 	if request.method == 'POST':
 		form = CustomerBuyForm(request.POST)
 		if form.is_valid():
 			cust = form.save(commit=False)
 			cust.customer = request.user
-			#form.save(commit=False)
-			#customer = request.user__id
-			#form.save()
 			cust.save()
 			return HttpResponseRedirect("/comprador/")
 	else:
 		form = CustomerBuyForm()
-	template = 'customer/edit-profile-buy.html'
-	return render(request,template,{'form':form})
-	#return render_to_response(template,context_instance=RequestContext(request,{'form': form} ))
+	template = 'customerbuy/step1.html'
+	return render_to_response(template,context_instance=RequestContext(request,{'form': form} ))
 
-def signup_product_customer_buy(request):
-	pass
+def step2(request):
+	"""registro de usuario administrador, del cliente comprador"""
+	form = UserCreationAdminForm(request.POST or None)
+	if form.is_valid():
+		comp = form.save()
+		comp.groups.add(Group.objects.get(name='usuario-admin-compras'))
 
+		return HttpResponseRedirect("/comprador/paso3/")
 
-def signup_address_customer_buy(request):
-	pass
+	# crear el user profile
+	# redireccionar al home
+	template = 'customerbuy/step2.html'
+	return render(request, template,{'form':form})
+	#return render_to_response("customer/signup.html", {'form': form,}, context_instance=RequestContext(request))
 
-def signup_contact_customer_buy (request):
-	pass
+def step3(request):
+	""" Paso 1 del registro de perfil """
+	if request.method == 'POST':
+		form = CustomerBuyForm(request.POST)
+		if form.is_valid():
+			cust = form.save(commit=False)
+			cust.customer = request.user
+			cust.save()
+			return HttpResponseRedirect("/comprador/")
+	else:
+		form = CustomerBuyForm()
+	template = 'customerbuy/step3.html'
+	return render_to_response(template,context_instance=RequestContext(request,{'form': form} ))
 
-def profile_customer_buy(request,usuario):
+def profile(request,usuario):
 	#usuario = request.user
 	cus_buy = CustomerBuy.objects.get(customer__username=usuario)
-	template = 'xd.html'
+	# = cus_buy.customer
+
+	template = 'customerbuy/profile.html'
 	return render(request, template, {'cus_buy':cus_buy})	
 
+def admin(request, usuario):
+	cus_buy = CustomerBuy.objects.get(customer__username=usuario)
+	template = 'customerbuy/admin/dashboard.html'
+	return render(request, template, {'cus_buy':cus_buy})
+
+
+
+
+def register_tag_product_customer_buy(request):
+	form = TagProductCustomerBuyForm(request.POST)
+	if form.is_valid():
+		ls = form.save(commit=False)
+		ls.customer_buy__customer = request.user
+		ls.save()
+
+	template = 'customerbuy/register_tag_product_customer_buy.html'
+	return render(request, template ,{'form':form})

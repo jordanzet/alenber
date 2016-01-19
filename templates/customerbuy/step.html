@@ -1,0 +1,138 @@
+{% extends 'base2.html' %}
+{% block container %}
+{% load static from staticfiles %}
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Pasos para registrarse</h3>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<h5>Paso 1:</h5>
+					<div class="col-md-8 text-center">
+						<img src="{% static "images/15-UserAdmin.png" %}">
+						<h4>crear el perfil de la empresa</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h5>Paso 2:</h5>
+					<div class="col-md-8 text-center">
+						<img src="{% static "images/15-UserAdmin.png" %}">
+						<h4>Designar a la persona que sera el Usuario-Admin</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h5>Paso 3:</h5>
+					<div class="col-md-8 text-center">
+						<img src="{% static "images/15-UserAdmin.png" %}">
+						<h4>El usuario-administrador ingresando a su cuenta podrá crear mas usuarios</h4>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-12">
+				<br><br><br><br><br><br>
+				<div class="col-md-6">
+
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="ruc_customer">RUC</label>
+							<input type="text" class="form-control" id="ruc_customer" placeholder="/...">
+						</div>
+						<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Verificar</button>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<h6><i class="fa fa-check fa-2x bg-green "></i> Puedes registrar la empresa</h6>
+				</div>
+			</div>
+			
+			
+
+
+			<div class="col-md-12"></div>
+			<div class="col-md-12"></div>
+			<div class="col-md-12"></div>
+			<br>
+		</div>
+	</div>
+	<div class="img-portada">
+		<img src="{% static "images/empresa/Antamina.png" %}">
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-3">
+					<img src="{% static "images/logos/Antamina.png" %}" width="100px">
+				</div>
+				<div class="col-md-9">
+					<h4>Compañia minera Antamina S.A.</h4>
+					<div class="col-md-2">Perfil</div>
+					<div class="col-md-2">Productos</div>
+					<div class="col-md-3">Contacto</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<H4>Descripción de la empresa</H4>
+				<hr>
+				<div class="col-md-4">
+					<h4>Razon Social: </h4>
+					<h4>RUC: </h4>
+					<h4>Oficina Principal: </h4>
+					<h4>Principales productos: </h4>
+					<h4>Sector: </h4>
+					<h4>Inicio de Actividades desde: </h4>
+					<h4>Numero de trabajadores: </h4>
+					<h4>Sitio web: </h4>
+				</div>
+				<div class="col-md-6">
+					<h4>Compañia Minera Antamina S.A.</h4>
+					<h4>23423423353534</h4>
+					<h4>Av el derby, Santiafgo de surco, lima, peru</h4>
+					<h4>Cobre , zinc, molibdeno</h4>
+					<h4>Minería </h4>
+					<h4>1995</h4>
+					<h4>100 - 5000 trabajadores </h4>
+					<h4><a target="_blank" href="http://www.antamina.com">www.antamina.com</a> </h4>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<h4>Productos</h4>
+				<hr>
+
+				<div></div>
+			</div>
+			<div class="col-md-12"></div>
+			<div class="col-md-12"></div>
+		</div>
+	</div>
+
+
+
+
+<div class="container">
+	<div class="row">
+		{% if user.is_authenticated %}
+		<li><a href="#"> Bienvenido - {{user.username}}</a></li>
+		<li><a href="{% url 'users:logout_user' %}">Cerrar Sesion </a></li>
+		{% else %}
+		<li><a href="#">Iniciar Sesion</a></li>
+		<li><a href="#">Registrate ;)</a></li>
+		{% endif %}
+		
+		<form class="form-light mt-20" method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button type="submit" class="btn btn-base btn-icon btn-icon-right btn-fly pull-right">
+				<span>Enviar Mensaje</span>
+			</button>			
+		</form>
+	</div>
+</div>
+
+
+{% endblock %}

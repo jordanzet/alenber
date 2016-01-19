@@ -1,0 +1,73 @@
+{% extends 'base2.html' %}
+{% block container %}
+{% load static from staticfiles %}
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Pasos para registrarse</h2> <br>
+				<div class="col-md-4">
+					<h3>Paso 1: <img src="{% static "images/iconos/120-Check-circle-green.png" %}" alt="check"> </h3>
+					<div class="col-md-8 text-center">
+						<img src="{% static "images/iconos/14-company_profile-65.png" %}">
+						<h4>crear el perfil de la empresa</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3 class="sombra-gruesa-negra">Paso 2:</h3>
+					<div class="col-md-9 text-center sombra-gris">
+						<img src="{% static "images/iconos/15-UserAdmin.png" %}">
+						<h4>Designar a la persona que sera el Usuario-Admin</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3>Paso 3:</h3>
+					<div class="col-md-9 text-center">
+						<img src="{% static "images/iconos/16-NewUser.png" %}">
+						<h4>El usuario-administrador ingresando a su cuenta podrá crear mas usuarios</h4>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-12">
+				<h3>Designación del usuario Administrador</h3>
+				<h4>El Usuario-Admin* tendrá los siguientes permisos</h4>
+				<ul>
+					<li>Al Usuario-Administrador le llegará un correo de confirmación de creación de cuenta, al crear su cuenta también estará autorizando la creación de la cuenta www.alenber.com/antamina</li>
+					<li>Sera el único quien podrá crear usuarios a los compradores</li>
+					<li>Podrá revisar el estado de las adquisiciones de los demás usuarios</li>
+					<li>También podrá mandar requerimientos y órdenes de compra como cualquier otro usuario</li>
+				</ul>
+				<p>*Se recomineda que el Usuario-Administrador sea el Gerente de Logistica, Gerente de compras, Jefe de Compras o un cargo con funciones equivalentes</p>
+
+				<h2>¿Quien sera el Usuario-Administrador?</h2>
+				<div class="col-md-2">
+					<img src="{% static "images/iconos/17-CrearUserAdmin.png" %}" alt="">
+				</div>
+				<div class="col-md-6">
+					<input type="text" placeholder="Nombre">
+					<input type="text" placeholder="Cargo">
+					<input type="text" placeholder="Email">
+				</div>
+			</div>
+			
+			<button class="btn-verde">
+				 -->  ir al ultimo paso
+			</button>
+
+			<div class="col-md-12">
+				<form action="" method="post">
+					{% csrf_token %}
+					{{form.as_p}}
+					<input type="submit" value="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
+
+

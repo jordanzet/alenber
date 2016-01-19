@@ -21,3 +21,18 @@ def login_user(request):
 def logout_user(request):
 	logout(request)
 	return HttpResponseRedirect('/iniciar-sesion/')
+
+"""
+def profile_user(request,usuario):
+	usuario = User.objects.get(username='usuario')
+	grupo = usuario.group.name
+	if grupo=='comprador':
+		customer = CustomerBuy.objects.get(customer__username=usuario)
+	else:
+		customer = CustomerProvider.objects.get(customer__username=usuario)
+	
+	template = 'xd.html'
+	return render(request, template, {'cus_buy':cus_buy})	
+
+
+"""

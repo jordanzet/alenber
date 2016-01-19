@@ -1,0 +1,381 @@
+<head>
+	<meta charset="UTF=8">
+	<link rel='icon' type="image/png" href="images/colibri-15.png">
+	<title> Colibri Supplier </title>
+	<link href="css/style-cotizacion.css" type="txt.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+
+
+	<div class="container-menu-bar">
+		<div class="container-logo-colibri">
+			<div class="logo_colibri" style="text-align:center">
+				<img src="images/colibri-V3-white.png" alt="Logo" width="42%" height="55%">
+				<br>
+				<p class="white13">Colibri Supplier</p>
+			</div>
+		</div>
+
+		<div class="container-menu">
+			<div class="clear"></div>
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/29-Buzon-white-blue-36.png" class="button-img" onmouseover="this.src='images/29-Buzon-blue-36.png'" onmouseout="this.src='images/29-Buzon-white-blue-36.png'">
+					<p class="container-menu-text white13" >
+						Bandeja
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/21-Pub-req-white-blue-36.png" class="button-img" onmouseover="this.src='images/21-Pub-req-blue-36.png'" onmouseout="this.src='images/21-Pub-req-white-blue-36.png'">
+					<p class="container-menu-text white13" >
+						Nuevo Req
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/22-Req-en-Cot-blue-36.png" class="button-img" onmouseover="this.src='images/22-Req-en-Cot-blue-36.png'" onmouseout="this.src='images/22-Req-en-Cot-blue-36.png'">
+					<p class="container-menu-text white13" >
+						Cotizaciones
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/23-Req-en-Comp-all-white-36.png" class="button-img" onmouseover="this.src='images/23-Req-en-Comp-blue-36.png'" onmouseout="this.src='images/23-Req-en-Comp-all-white-36.png'">
+					<p class="container-menu-text white13" >
+						Pedidos
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon" style="margin-top:40px;">
+				<button class="container-menu-button" >
+					<img src="images/24-Historico-allwhite-36.png" class="button-img" onmouseover="this.src='images/24-Historico-blue-36.png'" onmouseout="this.src='images/24-Historico-allwhite-36.png'">
+					<p class="container-menu-text white13" >
+						Hist&oacute;rico
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon">
+				<button class="container-menu-button" >
+					<img src="images/25-Estadisticas-allwhite-36.png" class="button-img" onmouseover="this.src='images/25-Estadisticas-blue-36.png'" onmouseout="this.src='images/25-Estadisticas-allwhite-36.png'">
+					<p class="container-menu-text white13" >
+						Estad&iacute;stica
+					</p>
+				</button>
+			</div>
+
+			<div class="container-menu-sup-icon" style="margin-top:180px;">
+				<button class="container-menu-button" >
+					<img src="images/pictures/Elias-circle.png">
+					<p class="container-menu-text white13" >
+						ELIAS
+					</p>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-cabecera">
+		<div class="container-logo">
+			<img src="images/logos/Antamina.png" style="max-width:100%; max-height:100%;top:20%">
+		</div>
+
+		<div class="container-title">
+			<div class="title20">
+				Cotizaci&oacute;n
+			</div>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="container-work-area">
+		<div class="paper">
+			<div class="cabecera">
+				<img src="images/logos/delcrosa.jpg" height="70px">
+				<div class="cabecera-text">
+					<div class="gris18">
+						Delcrosa S.A.
+					</div>
+					<div class="gris14">
+						Cotizaci&oacute;n para Compa&ntilde;&iacute;a Minera Antamina S.A.
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<canvas id="line" width="800px" height="2px"></canvas>
+
+			<div class="container-nombre-pedido">
+				<div class="black18" style="width:170px; float:left; position:relative;">
+					Producto propuesto:
+				</div>
+				<div style="width:410px; font-size:18px; color:#f4811f; float:left; position:relative;">
+					Motor de Inducci&oacute;n de alta tensi&oacute;n
+				</div>
+
+				<div class="gris16" style="width:170px; float:left; position:relative;margin-top:2px;">
+					Producto solicitado:
+				</div>
+
+				<div class="blue16" style="width:410px; float:left; position:relative; margin-top:2px;">
+					Motor de Inducci&oacute;n de alta tensi&oacute;n
+				</div>
+
+				<div class="clear"></div>
+				
+				<div style="margin-top:20px; margin-bottom:30px;">
+					<div class="gris16 float-left" style="margin-left:250px; display:inline-block;width:50px;">
+						Solicitado
+					</div>
+
+					<div class="orange16 float-left" style="margin-left:120px; display:inline-block;width:50px;">
+						Propuesto
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div style="margin-top:10px; margin-bottom:30px;">
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Cantidad:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						5 Unidades
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						5 Unidades
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div>
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Entregado en:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						San Marcos, Ancash
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						San Marcos, Ancash
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div>
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Plazo de entrega:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						15 de setiembre
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						5 de setiembre
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div>
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Precio:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						....
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						US$ 30,000.00 por las 5 Unidades
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+
+			<div class="clear"></div>
+			
+			<div class="container-nombre-pedido" style="margin-top:40px;">
+				<div style="margin-top:20px; margin-bottom:30px;">
+					<div class="black16 float-left" style="display:inline-block;width:230px;">
+						Detalles t&eacute;cnicos
+					</div>
+
+					<div class="gris16 float-left" style="margin-left:20px; display:inline-block;width:150px;">
+						Solicitado
+					</div>
+
+					<div class="orange16 float-left" style="margin-left:20px; display:inline-block;width:150px;">
+						Propuesto
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div style="margin-top:10px; margin-bottom:30px;">
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Potencia:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						2,000 a 3,000 kW
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						2,800 kW
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div >
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Tama&ntilde;o:
+					</div>
+					<div class="gris13" style="width:150px; height:25px;  float:left; position:relative; margin-left:20px; ">
+						IEC 400
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						IEC 400
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div >
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Tensi&oacute;on:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						1,000 a 1,500 V
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						1,200 a 1,300 V
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div >
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Frecuencia:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						50 o 60 Hz
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						50 o 60 Hz
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div style="margin-top:20px;">
+					<div class="gris13" style="width:300px; height:25px; float:left; position:relative;">
+						Material de acero soldado, para montaje horizontal o vertical
+					</div>
+					
+					<div class="black13" style="width:250px; height:25px; float:left; position:relative; margin-left:20px;">
+						Nuestro motor es de acero soldado; y puede ser motodado en posici&oacute;on horizontal o vertical
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="container-nombre-pedido" style="margin-top:70px;">
+				<div style="margin-top:20px; margin-bottom:30px;">
+					<div class="black16 float-left" style="display:inline-block;width:230px;">
+						Detalles comerciales
+					</div>
+
+					<div class="gris16 float-left" style="margin-left:20px; display:inline-block;width:150px;">
+						Solicitado
+					</div>
+
+					<div class="orange16 float-left" style="margin-left:20px; display:inline-block;width:150px;">
+						Propuesto
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div style="margin-top:10px; margin-bottom:30px;">
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Tipo de pago:
+					</div>
+					<div class="gris13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px; ">
+						A 30 d&iacute;as
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						A 30 d&iacute;as
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div >
+					<div class="gris13" style="width:230px; height:25px; float:left; position:relative;margin-top:2px;">
+						Garat&iacute;a:
+					</div>
+					<div class="gris13" style="width:150px; height:25px;  float:left; position:relative; margin-left:20px; ">
+						2 a&ntilde;os
+					</div>
+					<div class="black13" style="width:150px; height:25px; float:left; position:relative; margin-left:20px;">
+						2 a&ntilde;os
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div style="margin-top:20px;">
+					<div class="gris13" style="width:300px; height:25px; float:left; position:relative;">
+						Incluye servicio de instalaci&ocute;n
+					</div>
+					
+					<div class="black13" style="width:250px; height:25px; float:left; position:relative; margin-left:20px;">
+						Nosostros nos encargaremos de la instalaci&oacute;n
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+
+		</div>
+
+		<div class="button-publicar">
+			<button id="id-button-publicar">
+				<img src="images/107-Check-white.png"  align="middle">
+				<a href="Index-prov-select.html">Seleccionar proveedor</a>
+			</button>
+		</div>
+
+	</div>
+
+
+
+	<script>
+		var c = document.getElementById("line");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(20, 0);
+		ctx.lineTo(600, 0);
+		ctx.lineWidth=1;
+		ctx.strokeStyle='#bfe0ec';
+		ctx.stroke();
+	</script>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
